@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": false,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": false,
+    "useUnknownInCatchVariables": true,
+    "strictNullChecks": false,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@packages/berish-configurator-core": [
+        "packages/berish-configurator-core/src"
+      ],
+      "@packages/berish-configurator-env": [
+        "packages/berish-configurator-env/src"
+      ],
+      "@shared/db": [
+        "shared/db/src"
+      ],
+      "@shared/config": [
+        "shared/config/src"
+      ],
+      "@shared/grpc": [
+        "shared/grpc/src"
+      ],
+      "@shared/modules": [
+        "shared/modules/src"
+      ],
+      "@generated/*": [
+        ".generated/*"
+      ],
+    }
+  }
+}

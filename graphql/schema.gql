@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserAccount {
+  id: ID!
+  userId: Float!
+  provider: UserAccountProviderEnum!
+  user: User!
+}
+
+enum UserAccountProviderEnum {
+  UNKNOWN
+  GOOGLE
+  UNRECOGNIZED
+}
+
+type User {
+  id: ID!
+  email: String!
+  firstName: String!
+  lastName: String!
+  accounts: [UserAccount!]!
+}
+
+type Query {
+  findMe: User!
+}

@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package USER_IDENTITY;
+
+enum UserAccountProviderEnum {
+    UNKNOWN = 0;
+    GOOGLE = 1;
+}
+
+message User {
+    int32 id = 1;
+    string email = 2;
+    optional string firstName = 3;
+    optional string lastName = 4;
+
+    repeated UserAccount accounts = 5;
+}
+
+message UserAccount {
+    int32 id = 1;
+    int32 userId = 2;
+    UserAccountProviderEnum provider = 3;
+
+    User user = 4;
+}
+
+message SignInWithProviderRequest {
+    string email = 1;
+    string firstName = 2;
+    string lastName = 3;
+    UserAccountProviderEnum provider = 4;
+}
+
+service AuthService {
+    rpc SignInWithProvider(SignInWithProviderRequest) returns (stream User) {}
+}
+
+message FindUserByIdRequest {
+    int32 id = 1;
+}
+
+service UserService {
+    rpc FindUserById(FindUserByIdRequest) returns (stream User) {}
+}

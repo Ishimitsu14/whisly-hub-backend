@@ -1,0 +1,99 @@
+{
+  "name": "wish-list-backend",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
+    "start:dev": "./.startup/commands/nest-dev.sh",
+    "start:prod": "./.startup/commands/nest-prod.sh",
+    "start:debug": "nest start --debug --watch",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "db:generate": "./.startup/commands/drizzle-generate.sh",
+    "db:migrate": "./.startup/commands/drizzle-migrate.sh",
+    "proto:generate": "./.startup/commands/proto-generate.sh"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.5",
+    "@grpc/grpc-js": "^1.11.1",
+    "@grpc/proto-loader": "^0.7.13",
+    "@nestjs/apollo": "^12.2.0",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/cqrs": "^10.2.7",
+    "@nestjs/graphql": "^12.2.0",
+    "@nestjs/jwt": "^10.2.0",
+    "@nestjs/microservices": "^10.3.10",
+    "@nestjs/passport": "^10.0.3",
+    "@nestjs/platform-express": "^10.0.0",
+    "@types/cookie": "^0.6.0",
+    "@types/pg": "^8.11.6",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "cookie": "^0.6.0",
+    "decimal.js": "^10.4.3",
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "^11.0.6",
+    "drizzle-orm": "^0.32.1",
+    "esbuild": "^0.21.5",
+    "graphql": "^16.9.0",
+    "nestjs-grpc-exceptions": "^0.2.2",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-jwt": "^4.0.1",
+    "pg": "^8.12.0",
+    "postgres": "^3.4.4",
+    "protobufjs": "^7.3.2",
+    "reflect-metadata": "^0.2.0",
+    "rxjs": "^7.8.1",
+    "ts-proto": "^1.181.1",
+    "tsx": "^4.16.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/schematics": "^10.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/supertest": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "drizzle-kit": "^0.23.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.0",
+    "source-map-support": "^0.5.21",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/apps/"
+    ]
+  }
+}

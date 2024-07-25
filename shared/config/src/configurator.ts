@@ -1,0 +1,20 @@
+import { EnvConfigurator } from 'packages/berish-configurator-env/src';
+
+export interface EnvConfiguration {
+  APP_USER_IDENTITY_NAMESPACE: string;
+  APP_USER_IDENTITY_DB_URL: string;
+  APP_USER_IDENTITY_GRPC_PORT: number;
+  APP_USER_IDENTITY_GRPC_PACKAGE: string;
+
+  APP_FRONTEND_GATEWAY_NAMESPACE: string;
+  APP_FRONTEND_GATEWAY_PORT: number;
+  APP_FRONTEND_GATEWAY_AUTH_JWT_SECRET: string;
+  APP_FRONTEND_GATEWAY_AUTH_REDIRECT_URL: string
+  APP_FRONTEND_GATEWAY_AUTH_GOOGLE_ID: string;
+  APP_FRONTEND_GATEWAY_AUTH_GOOGLE_SECRET: string;
+  APP_FRONTEND_GATEWAY_AUTH_GOOGLE_CALLBACK_URL: string;
+  APP_FRONTEND_GATEWAY_AUTH_ACCESS_TOKEN_LIFETIME: number;
+  APP_FRONTEND_GATEWAY_AUTH_REFRESH_TOKEN_LIFETIME: number;
+}
+
+export const configurator = new EnvConfigurator<EnvConfiguration>();
